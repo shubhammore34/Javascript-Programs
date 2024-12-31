@@ -41,5 +41,84 @@ console.log(challenge.charAt(15))
 //What is the character code of J in '30 Days Of JavaScript' string using charCodeAt()
 console.log(challenge.charCodeAt('11'));
 
+//Use indexOf to determine the position of the first occurrence of a in 30 Days Of JavaScript
+console.log(challenge.indexOf('a'));
+
+//Use indexOf to find the position of the first occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let str1 = 'You cannot end a sentence with because because because is a conjunction';
+console.log(str1.indexOf('because'));
+
+//Use lastIndexOf to find the position of the last occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+console.log(str1.lastIndexOf('because'));
+
+//Use search to find the position of the first occurrence of the word because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+console.log(str1.search("because"));
+
+//Use trim() to remove any trailing whitespace at the beginning and the end of a string.E.g ' 30 Days Of JavaScript '.
+let str2 = ' 30 Days Of JavaScript ';
+console.log(str2.trim(" "));
+console.log(str2.trim());
+
+//Use startsWith() method with the string 30 Days Of JavaScript and make the result true
+let str3 = "30 Days Of JavaScript";
+console.log(str3.startsWith('30'));
+
+//Use endsWith() method with the string 30 Days Of JavaScript and make the result true
+console.log(str3.endsWith('JavaScript'));
+
+//Use match() method to find all the a’s in 30 Days Of JavaScript
+console.log(str3.match('a'));
+
+//Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
+let $str1 = "30 Days of ";
+console.log($str1.concat("JavaScript"));
+
+//Use repeat() method to print 30 Days Of JavaScript 2 times
+console.log(challenge.repeat(2))
+
+/* Exercise level 2 */ 
+/*The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.*/
+console.log("The quote \'There is no exercise better for the heart than reaching down and lifting people up.\' by John Holmes teaches us to help one another.")
+
+//"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
+console.log("\"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.\"")
+
+//Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+let numOne = '10';
+let $numOne = Number('10');
+let numTwo = 10;
+console.log(typeof('10')==10); //false, not equal
+console.log(($numOne)==numTwo);
+
+console.log(typeof($numOne)); 
+console.log(typeof(numTwo));
+console.log(typeof($numOne)==typeof(numTwo));
+console.log(typeof($numOne)==typeof(10));
+
+//Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+console.log(parseFloat('10')==10); //true
+
+//Check if 'on' is found in both python and jargon
+let str11 = 'python'
+let str22= 'jargon'
+console.log(str11.includes('on'));
+console.log(str22.includes('on'));
+
+//I hope this course is not full of jargon. Check if jargon is in the sentence.
+let str4 = 'I hope this course is not full of jargon.';
+console.log(str4.includes('jargon'));
+
+//Generate a random number between 0 and 100 inclusively.
+let randomNum = Math.random();
+let numBtnZeroAnd100Inclusively = randomNum*101;
+console.log(numBtnZeroAnd100Inclusively);
+
+//Generate a random number between 50 and 100 inclusively.
+let min = 50;
+let max = 100.1;
+let random = Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(`Random number between ${min} and ${max}: ${random}`);
+
+
 
 
