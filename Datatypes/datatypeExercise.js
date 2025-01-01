@@ -84,6 +84,12 @@ console.log("The quote \'There is no exercise better for the heart than reaching
 console.log("\"Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.\"")
 
 //Check if typeof '10' is exactly equal to 10. If not make it exactly equal.
+console.log(typeof('10')==typeof(10)) //false
+console.log(typeof(+'10')==typeof(10)) //true one method
+console.log(typeof parseInt('10')==typeof(10)) //Second method
+console.log(typeof Number ('10')==typeof(10)) //Third method
+
+
 let numOne = '10';
 let $numOne = Number('10');
 let numTwo = 10;
@@ -96,7 +102,10 @@ console.log(typeof($numOne)==typeof(numTwo));
 console.log(typeof($numOne)==typeof(10));
 
 //Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
-console.log(parseFloat('10')==10); //true
+console.log(parseFloat('9.8')); //9.8
+console.log(parseFloat('9.8')==10); //false
+console.log(Math.ceil(parseFloat('9.8'))==10) //true first way
+console.log(Math.round(parseFloat('9.8'))==10) //true second way
 
 //Check if 'on' is found in both python and jargon
 let str11 = 'python'
@@ -111,13 +120,52 @@ console.log(str4.includes('jargon'));
 //Generate a random number between 0 and 100 inclusively.
 let randomNum = Math.random();
 let numBtnZeroAnd100Inclusively = randomNum*101;
-console.log(numBtnZeroAnd100Inclusively);
+console.log(Math.floor(numBtnZeroAnd100Inclusively));
 
 //Generate a random number between 50 and 100 inclusively.
 let min = 50;
 let max = 100.1;
 let random = Math.floor(Math.random() * (max - min + 1)) + min;
 console.log(`Random number between ${min} and ${max}: ${random}`);
+
+//Generate a random number between 0 and 255 inclusively.
+let min1= 0;
+let max1=255.1;
+let random1 = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
+console.log(`Random number between ${min1} and ${max1}: ${random1}`);
+
+//Use console.log() and escape characters to print the following pattern.
+// 1 1 1 1 1
+// 2 1 2 4 8
+// 3 1 3 9 27
+// 4 1 4 16 64
+// 5 1 5 25 125
+
+console.log("1 1 1 1 1 \n2 1 2 4 8 \n3 1 3 9 27 \n4 1 4 16 24 \n5 1 5 25 125")
+
+//Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let sentence = 'You cannot end a sentence with because because because is a conjunction';
+console.log(sentence.substr(32, 23)); //substr(): It takes two arguments, the starting index and number of characters to slice.
+
+//Exercise level 3
+//'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word love in this sentence.
+let sentence2 = 'Love is the best thing in this world. Some found their love and some are still looking for their love.';
+console.log(sentence2.match(/love/gi));
+console.log(sentence2.match(/love/gi).length); //i is used for case insensitive
+
+//Use match() to count the number of all because in the following sentence:'You cannot end a sentence with because because because is a conjunction'
+let sentence3 = 'You cannot end a sentence with because because because is a conjunction'
+console.log(sentence3.match(/because/g))
+console.log(sentence3.match(/because/g).length)
+
+
+
+
+
+
+
+
+
 
 
 
