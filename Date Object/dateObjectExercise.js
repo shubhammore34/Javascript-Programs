@@ -137,3 +137,78 @@ console.log(str4.includes('on')); //true
 
 console.log(!(str3.includes('on') && (str4.includes('on') ) ) ); 
 
+/* Use the Date object to do the following activities
+
+What is the year today?
+What is the month today as a number?
+What is the date today?
+What is the day today as a number?
+What is the hours now?
+What is the minutes now?
+*/
+
+const now = new Date()
+console.log(now.getFullYear()) //2025
+
+console.log(now.getMonth()) //0, because the month is January,  month(0-11)
+
+console.log(now.getDate()) //5th January
+
+console.log(now.getDay()) //Sunday is 0
+
+console.log(now.getHours()) //19 hours 
+
+console.log(now.getMinutes()) //8 
+
+
+//Exercise level 2
+/* Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+
+Enter base: 20
+Enter height: 10
+The area of the triangle is 100 */
+
+let base = prompt("Enter base of the triangle : ")
+let height = prompt("Enter height of the triangle : ")
+console.log(`base of the triangle :  ${base}`)
+console.log(`height of the triangle : ${height}`)
+
+let areaOfTriangle = 0.5 * base * height;
+console.log(`area of triangle is ${areaOfTriangle}`)
+
+/* Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+
+Enter side a: 5
+Enter side b: 4
+Enter side c: 3
+The perimeter of the triangle is 12 */
+
+let side_a = prompt("Enter side a : ");
+let side_b = prompt("Enter side b : ");
+let side_c = prompt("Enter side c : ");
+
+///The prompt input returned is a string we need ot convert it to a number for arithmetic calculations
+let perimeterOfTriangle = parseInt(side_a) + parseInt(side_b) + parseInt(side_c);
+
+console.log((`The perimeter of the triangle is ${perimeterOfTriangle}`));
+
+//2nd way
+let side_a = parseInt(prompt("Enter side a : "));
+let side_b = parseInt(prompt("Enter side b : "));
+let side_c = parseInt(prompt("Enter side c : "));
+///The prompt input returned is a string we need ot convert it to a number for arithmetic calculations
+let perimeterOfTriangle = (side_a + side_b + side_c);
+console.log((`The perimeter of the triangle is ${perimeterOfTriangle}`));
+
+//Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+
+let length = prompt("Length : ")
+let width = prompt("Width : ")
+let areaOfRectangle = 2 * (length * width)
+console.log(`area of rectangle : ${areaOfRectangle}`);
+
+let perimeterOfRectangle = 2 * (length + width);
+console.log(`perimeter of rectangle : ${perimeterOfRectangle}`)
+
+
+
