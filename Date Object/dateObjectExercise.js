@@ -183,22 +183,22 @@ Enter side b: 4
 Enter side c: 3
 The perimeter of the triangle is 12 */
 
-let side_a = prompt("Enter side a : ");
-let side_b = prompt("Enter side b : ");
-let side_c = prompt("Enter side c : ");
+let $side_a = prompt("Enter side a : ");
+let $side_b = prompt("Enter side b : ");
+let $side_c = prompt("Enter side c : ");
 
 ///The prompt input returned is a string we need ot convert it to a number for arithmetic calculations
-let perimeterOfTriangle = parseInt(side_a) + parseInt(side_b) + parseInt(side_c);
+let perimeterOfTriangle2 = parseInt($side_a) + parseInt($side_b) + parseInt($side_c);
 
-console.log((`The perimeter of the triangle is ${perimeterOfTriangle}`));
+console.log((`The perimeter of the triangle is ${perimeterOfTriangle2}`));
 
 //2nd way
 let side_a = parseInt(prompt("Enter side a : "));
 let side_b = parseInt(prompt("Enter side b : "));
 let side_c = parseInt(prompt("Enter side c : "));
 ///The prompt input returned is a string we need ot convert it to a number for arithmetic calculations
-let perimeterOfTriangle = (side_a + side_b + side_c);
-console.log((`The perimeter of the triangle is ${perimeterOfTriangle}`));
+let perimeterOfTriangle4 = (side_a + side_b + side_c);
+console.log((`The perimeter of the triangle is ${perimeterOfTriangle4}`));
 
 //Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
 
@@ -210,5 +210,62 @@ console.log(`area of rectangle : ${areaOfRectangle}`);
 let perimeterOfRectangle = 2 * (length + width);
 console.log(`perimeter of rectangle : ${perimeterOfRectangle}`)
 
+//Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+
+let radius = prompt("Enter radius : ");
+let areaOfCircle = (Math.PI)*radius*radius;
+console.log(`area of radius is  ${areaOfCircle}`);
+
+let circumferenceOfCircle = 2 * (Math.PI) * radius;
+console.log(`circumference of a circle is  ${circumferenceOfCircle}`);
+
+/* Writ a script that prompt a user to enter hours and rate per hour. Calculate pay of the person?
+
+Enter hours: 40
+Enter rate per hour: 28
+Your weekly earning is 1120 */
+let hours = prompt("Enter hours: ");
+let ratePerHour = prompt("Enter rate per hour: ");
+let payOfPerson = hours * ratePerHour;
+console.log(`Your weekly earning is ${payOfPerson}`);
+
+/*If the length of your name is greater than 7 say, your name is long else say your name is short.*/
+const lengthOfName = 7;
+
+(lengthOfName>7)? console.log(`your name is long`): console.log(`your name is short`) 
 
 
+/*Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+
+Enter birth year: 1995
+You are 25. You are old enough to drive
+
+Enter birth year: 2005
+You are 15. You will be allowed to drive after 3 years.*/
+
+let yearOfUser = prompt("Enter year : ");
+
+(yearOfUser>=18)?
+ console.log(`You are ${yearOfUser}. You are old enough to drive`):
+ console.log(`You are ${yearOfUser}. You will be allowed to drive after ${18 - yearOfUser} years`)
+
+
+ /*Create a human readable time format using the Date time object
+
+YYYY-MM-DD HH:mm
+DD-MM-YYYY HH:mm
+DD/MM/YYYY HH:mm*/
+
+let dateInfo = new Date();
+let year2 = dateInfo.getFullYear();
+let month = dateInfo.getMonth();
+let date = dateInfo.getDate();
+let hours2 = dateInfo.getHours();
+let minutes = dateInfo.getMinutes();
+
+// Solution 1
+console.log(`${year2}-${month}-${date} ${hours2}:${minutes}`);
+// solution 2
+console.log(`${date}-${month}-${year2} ${hours2}:${minutes}`);
+// solution 3
+console.log(`${date}/${month}/${year2} ${hours2}:${minutes}`);
