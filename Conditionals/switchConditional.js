@@ -15,8 +15,9 @@ switch(caseValue){
   }
 
   
-  //Example : 
-  let weather = 'cloudy'
+//Example : 
+
+let weather = 'cloudy'
 switch (weather) {
   case 'rainy':
     console.log('You need a rain coat.')
