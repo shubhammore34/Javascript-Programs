@@ -83,9 +83,13 @@ Creating an array using split
 As we have seen in the earlier section, we can split a string at different positions, and we can change to an array. Let us see the examples below.
 */
 let js = 'JavaScript'
-const charsInJavaScript = js.split('')
 
+const charsInJavaScript = js.split('')
 console.log(charsInJavaScript) // ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+
+let js2 = 'JavaScript'
+const charsInJavaScript2 = js2.split()
+console.log(charsInJavaScript2) // [ 'JavaScript' ]
 
 let companiesString = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
 const companies = companiesString.split(',')
