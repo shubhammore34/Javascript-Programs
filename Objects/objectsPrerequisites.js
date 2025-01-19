@@ -118,4 +118,9 @@ function letsLearnScope() {
     console.log(i) // 0, 1, 2
   }
   console.log(i) //Uncaught ReferenceError: i is not defined
+
+
+  /*The scope let and const are the same. The difference is only reassigning. We can not change or reassign the value of the const variable. I would strongly suggest you to use let and const, by using let and const you will write clean code and avoid hard to debug mistakes. As a rule of thumb, you can use let for any value which change, const for any constant value, and for an array, object, arrow function and function  expression.*/  
+
+
   

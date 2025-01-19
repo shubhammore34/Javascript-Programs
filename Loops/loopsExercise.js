@@ -63,3 +63,8 @@ console.log('#####')
 console.log('######')
 console.log('#######')
 
+/*Use for loop to iterate from 0 to 100 and print only even numbers
+*/
+for(let i = 0; i<=100; i++) {
+    console.log(`${i%2==0}`)
+}
